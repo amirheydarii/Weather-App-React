@@ -1,0 +1,270 @@
+:root {
+  --white: #fffeff;
+  --gray: #AEAEAE;
+  --gray-light: #D3D3D3;
+  --block: #000000;
+  --black-light: #1e1e1e;
+}
+
+/* font-family: 'Roboto Condensed', sans-serif; */
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--black-light);
+}
+
+#root {
+  margin: 0;
+  width: min(1440px, 100%);
+  background-color: var(--block);
+  min-height: 100vh;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+/* header */
+.header-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.header-items-container {
+  width: 18%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header-form-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  background-color: var(--black-light);
+  padding: 0.4rem 5rem 0.4rem 1.6rem;
+  border-radius: 2rem;
+}
+
+.input {
+  border: none;
+  background-color: transparent;
+  color: var(--gray);
+  font-size: 1.3rem;
+}
+
+.input:focus {
+  outline-width: 0;
+}
+
+.fa-magnifying-glass {
+  color: var(--gray);
+  font-size: 1.5rem;
+}
+
+.fa-location-dot {
+  color: var(--white);
+  font-size: 1.4rem;
+}
+
+.location-city {
+  font-size: 1.4rem;
+  color: var(--gray-light);
+}
+
+.location-countray {
+  color: var(--gray);
+  font-size: 1.2rem;
+}
+
+.profile {
+  background-color: var(--gray);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+}
+
+/* body */
+.main-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* weeks */
+
+.week-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.week-header {
+  display: flex;
+}
+
+.week-days {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.3rem, 1fr));
+  column-gap: 0.5rem;
+}
+
+.day {
+  background-color: var(--black-light);
+  justify-self: center;
+  padding: 0rem 2rem 2rem 2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-text {
+  color: var(--white);
+  font-size: 1.5rem;
+  border-radius: 1px;
+  border-bottom: 2px solid #444444;
+  padding-bottom: 2rem;
+}
+
+.degree {
+  margin-top: 0rem;
+  color: var(--white);
+  font-size: 2.5rem;
+  font-family: 'Rubik Marker Hatch', cursive;
+}
+
+.fa-cloud-meatball {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+/* special item */
+.today {
+  background: rgb(187, 216, 236);
+  background: linear-gradient(
+    0deg,
+    rgba(187, 216, 236, 1) 80%,
+    rgba(173, 202, 222, 1) 80%
+  );
+  grid-column: 1/3;
+  justify-self: start;
+  padding: 0rem 0.5rem 1rem 0.5rem;
+  border-radius: 1.2rem;
+}
+
+.special-first-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-twice-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.special-item {
+  padding: 0;
+  margin: 0.5rem 0rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.special-text {
+  font-size: 1.3rem;
+}
+
+.clock {
+  font-family: 'Exo', sans-serif;
+  font-size: 1.3rem;
+}
+
+.special-degree {
+  font-family: 'Rubik Burned', cursive;
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+#special-icon {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+#special-text {
+  color: var(--black);
+}
+/* map */
+.map-container {
+  grid-column: 1/2;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+/* #map {
+  box-sizing: border-box;
+  height: 90%;
+  border-radius: 1rem;
+} */
+
+.leaflet-container {
+  box-sizing: border-box;
+  height: 90%;
+  border-radius: 1rem;
+}
+
+/* sidebar */
+.sidebar-container {
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+
+.neighborhood-container {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.7rem;
+  box-sizing: border-box;
+}
+
+.neighborhood {
+  box-sizing: border-box;
+  background-color: var(--black-light);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  justify-items: center;
+  align-items: end;
+}
+
+.sidebar-city {
+  color: var(--gray-light);
+}
+
+.situation {
+  color: var(--gray);
+}
+
+#sidebar-item {
+  align-self: center;
+  font-size: 3rem;
+}
+
+#sidebar-dagree {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* global */
+
+.text {
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--gray-light);
+}
